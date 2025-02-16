@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    // animation
     function setHomePositions() {
         $(".box").each(function () {
 
@@ -13,7 +14,6 @@ $(document).ready(function () {
     }
 
     setHomePositions();
-
 
     var container = $(".wrapper");
     var mouse = { x: 0, y: 0 };
@@ -60,6 +60,7 @@ $(document).ready(function () {
     });
 
 
+    // modal
     $('.modal-toggler').on('click', function (e) {
         e.preventDefault();
         $('.modal').addClass('active');
@@ -81,33 +82,36 @@ $(document).ready(function () {
         }
     });
 
-    $(document).ready(function () {
-        $('.modal form').on('submit', function (e) {
-            e.preventDefault();
 
+    $('.modal form').on('submit', function (e) {
+        e.preventDefault();
 
-            var formData = $(this).serialize();
-            var $form = $(this);
-            $.ajax({
-                type: 'POST',
-                url: 'mail.php',
-                data: formData,
-                success: function () {
-                    var $successMessage = $('<div class="modal-success">Your form has been successfully submitted!</div>');
-                    $('.modal').append($successMessage);
+        // var formData = $(this).serialize();
+        // var $form = $(this);
+        // $.ajax({
+        //     type: 'POST',
+        //     url: 'mail.php',
+        //     data: formData,
+        //     success: function () {
+        //         var $successMessage = $('<div class="modal-success">Your form has been successfully submitted!</div>');
+        //         $('.modal').append($successMessage);
 
-                    $successMessage.fadeIn(300).delay(2000).fadeOut(300, function () {
-                        $(this).remove();
-                        $('.modal').removeClass('active');
-                        $('body').removeClass('overflow-hidden');
-                        $form.trigger('reset');
-                    });
-                },
-            })
+        //         $successMessage.fadeIn(300).delay(2000).fadeOut(300, function () {
+        //             $(this).remove();
+        //             $('.modal').removeClass('active');
+        //             $('body').removeClass('overflow-hidden');
+        //             $form.trigger('reset');
+        //         });
+        //     },
+        //     error: function(xhr, status, error) {
+        //         console.error("Error: ", status, error);
+        //     }
+        // });
 
-        });
+        $('.modal').removeClass('active');
+        $('body').removeClass('overflow-hidden');
+
     });
-
 });
 
 
