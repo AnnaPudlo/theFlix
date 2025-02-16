@@ -90,7 +90,7 @@ $(document).ready(function () {
             var $form = $(this);
             $.ajax({
                 type: 'POST',
-                url: '/mail.php',
+                url: 'mail.php',
                 data: formData,
                 success: function () {
                     var $successMessage = $('<div class="modal-success">Your form has been successfully submitted!</div>');
