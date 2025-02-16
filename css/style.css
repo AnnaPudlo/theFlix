@@ -663,48 +663,48 @@ p {
     }
 
     .box:nth-child(1) {
-        left: 8px;
-        top: calc(100% - 86px) ;
+        left: 8px !important;
+        top: calc(100% - 86px) !important;
     }
 
     .box:nth-child(2) {
-        left: 8px ;
-        top: 0 ;
+        left: 8px !important;
+        top: 0 !important;
     }
 
     .box:nth-child(3) {
-        left: calc(50% - 43px) ;
-        top: calc(25% - 43px) ;
+        left: calc(50% - 43px) !important;
+        top: calc(25% - 43px) !important;
     }
 
     .box:nth-child(4) {
-        left: calc(100% - 94px) ;
-        top: 0 ;
+        left: calc(100% - 94px) !important;
+        top: 0 !important;
     }
 
     .box:nth-child(5) {
-        left: calc(100% - 94px);
-        top: calc(100% - 86px) ;
+        left: calc(100% - 94px) !important;
+        top: calc(100% - 86px) !important;
     }
 
     .box:nth-child(10),
     .box:nth-child(6) {
-        display: none ;
+        display: none !important;
     }
 
     .box:nth-child(7) {
-        left: 0 ;
-        top: calc(50% - 43px);
+        left: 0 !important;
+        top: calc(50% - 43px) !important;
     }
 
     .box:nth-child(8) {
-        left: calc(50% - 43px);
-        top: calc(75% - 43px);
+        left: calc(50% - 43px) !important;
+        top: calc(75% - 43px) !important;
     }
 
     .box:nth-child(9) {
-        left: calc(100% - 86px);
-        top: calc(50% - 43px);
+        left: calc(100% - 86px) !important;
+        top: calc(50% - 43px) !important;
     }
 
     .logo {
