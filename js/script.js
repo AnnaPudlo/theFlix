@@ -37,17 +37,23 @@ $(document).ready(function () {
 
             var magnet = 1000;
 
-            var powerX = currentX - (dx / distance) * magnet / distance;
-            var powerY = currentY - (dy / distance) * magnet / distance;
+            var threshold = 150;
+
+            var effectiveMagnet = (distance < threshold) ? magnet * (distance / threshold) : magnet;
+
+            var powerX = currentX - (dx / distance) * effectiveMagnet / distance;
+            var powerY = currentY - (dy / distance) * effectiveMagnet / distance;
             var forceX = (homeX - currentX) / 2;
             var forceY = (homeY - currentY) / 2;
 
             $box.css("left", (powerX + forceX) + "px");
             $box.css("top", (powerY + forceY) + "px");
         });
+
+        requestAnimationFrame(animateBoxes);
     }
 
-    var magnetInterval = setInterval(animateBoxes, 15);
+    requestAnimationFrame(animateBoxes);
 
 
     var resizeTimer;
@@ -112,6 +118,7 @@ $(document).ready(function () {
         $('body').removeClass('overflow-hidden');
 
     });
+
 
     //hero parallax 
     $(window).on('scroll', function () {
