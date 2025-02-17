@@ -112,6 +112,13 @@ $(document).ready(function () {
         $('body').removeClass('overflow-hidden');
 
     });
+
+    //hero parallax 
+    $(window).on('scroll', function () {
+        var scrollPos = $(window).scrollTop();
+        var parallaxOffset = scrollPos * 0.1;
+        $('.hero .container').css('transform', 'translateY(' + parallaxOffset + 'px)');
+    });
 });
 
 
