@@ -35,7 +35,7 @@ $(document).ready(function () {
             var dy = mouse.y - currentY;
             var distance = Math.sqrt(dx * dx + dy * dy) || 1;
 
-            var magnet = 500;
+            var magnet = 1000;
 
             var powerX = currentX - (dx / distance) * magnet / distance;
             var powerY = currentY - (dy / distance) * magnet / distance;
